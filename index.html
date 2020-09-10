@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <title>Spotify</title>
+   </head>
+   <body>
+      <div class="sidebar">
+         <div class="sidebar-wraper">
+            <div class="sidebar__logo">
+               <img src="img/spotify-logo.png"/>
+            </div><!--sidebar__logo-->
+            <div class="sidebar__menu">
+               <a class="sidebar__menu__selecionado" href="#"><i class="fas fa-home"></i>Início</a>
+               <a href="#"><i class="fas fa-search"></i>Buscar</a>
+               <a href="#"><i class="fas fa-database"></i>Sua Biblioteca</a>
+            </div><!--Sidebar__menu-->
+            <div class="sidebar__menu">
+               <p class="sidebar__menu__title">Playlists</p>
+               <div class="sidebar__menu__item">
+                  <div class="sidebar__menu__item__componente">
+                     +
+                  </div>
+                  <span>Criar Playlist</span>
+               </div><!--sidebar__menu__item-->  
+               <div class="sidebar__menu__item">
+                  <img src="img/musicas_curtidas.png"/>
+                  <span>Músicas Curtidas</span>
+               </div><!--Sidebar__menu__item-->
+            </div><!--Sidebar__menu-->
+            <div class="sidebar__playlists">
+               <a href="">Playlist 1</a>
+               <a href="">Playlist 2</a>
+               <a href="">Playlist 3</a>
+               <a href="">Playlist 4</a>
+               <a href="">Playlist 5</a>
+            </div><!--sidebar__Playlists-->
+            <div class="sidebar__playlists">
+               <a href="">Playlist 1</a>
+               <a href="">Playlist 2</a>
+               <a href="">Playlist 3</a>
+               <a href="">Playlist 4</a>
+               <a href="">Playlist 5</a>
+            </div><!--sidebar__Playlists-->
+            <div class="sidebar__playlists">
+               <a href="">Playlist 1</a>
+               <a href="">Playlist 2</a>
+               <a href="">Playlist 3</a>
+               <a href="">Playlist 4</a>
+               <a href="">Playlist 5</a>
+            </div><!--sidebar__Playlists-->
+         </div><!--sidebar-wraper-->
+      </div><!--Sidebar-->
+      <div class="main">
+         <div class="main-wraper">
+            <div class="main__row">
+               <div class="main__row__title"><h2>Paradas</h2></div><!--main__row_title-->
+               <div class="main__col">
+                     <img src="img/As 50 mais tocadas no Brasil.png"/>
+                     <h4>As 50 mais tocadas no Brasil</h4>
+                     <p>Seu relatório diário das faixas mais tocadas no Brasil no momento.</p>
+               </div><!--main__col-->
+               <div class="main__col">
+                  <img src="img/As 50 mais tocadas no mundo.png"/>
+                  <h4>As 50 mais tocadas no mundo</h4>
+                  <p>Seu relatório diário das faixas mais tocadas no momento..</p>
+               </div><!--main__col-->
+               <div class="main__col">
+                  <img src="img/Top Brasil.png"/>
+                  <h4>Top Brasil</h4>
+                  <p>
+                     Só basta você dar um play pra recair na vontade de ouvir Os Barões da Pisadinha outra vez. Confira os maiores hits do Brasil!.
+                  </p>
+               </div><!--main__col-->
+               <div class="main__col">
+                  <img src="img/Viral São Paulo BR.png"/>
+                  <h4>Viral São Paulo BR</h4>
+                  <p>The most distinctively popular new songs in São Paulo BR relative to the rest of the world.</p>
+               </div><!--main__col-->
+               <div class="main__col">
+                  <img src="img/Viral Rio de Janeiro BR.png"/>
+                  <h4>Viral Rio de Janeiro BR</h4>
+                  <p>
+                     The most distinctively popular new songs in Rio de Janeiro BR relative to the rest of the world..
+                  </p>
+               </div><!--main__col-->
+               <div class="main__col">
+                  <img src="img/Viral Belo Horizonte BR.png"/>
+                  <h4>Viral Belo Horizonte BR</h4>
+                  <p>The most distinctively popular new songs in Belo Horizonte BR relative to the rest of the world.</p>
+               </div><!--main__col-->
+
+               <div class="main__row__title"><h2>Minhas músicas</h2></div><!--main__row_title-->
+               <div class="main__col" data-image="img/Guns N Roses.png" data-artist="Guns N Roses" data-song="Sweet child o Mine" data-file="Assets/Guns n Roses - Sweet Child o Mine.mp3">
+                     <img src="img/Guns N Roses.png"/>
+                     <h4>Guns n Roses</h4>
+                     <p>Sweet Child o' Mine</p>
+               </div><!--main__col-->
+               <div class="main__col" data-image="img/Rocky Balboa.png" data-artist="Rocky Balboa" data-song="Gonna Fly Now" data-file="Assets/Rocky Balboa - Gonna Fly Now.mp3">
+                  <img src="img/Rocky Balboa.png"/>
+                  <h4>Rocky Balboa</h4>
+                  <p></p>
+               </div><!--main__col-->
+            </div><!--main__row-->
+         </div><!--main-wraper-->
+      </div><!--main-->
+      <div class="player">
+         <div class="player__artist">
+
+         </div>
+         <div class="player__control">
+            <div class="player__control__buttons">
+               <a href=""><i class="fas fa-backward"></i></a>
+               <a style="display: none;" id="pauseBtn" href="#"><i class="fas pause-circle"></i></a>
+               <a id="playBtn" href="#"><i class="fas fa-circle"></i></a>
+               <a href=""><i class="fas fa-forward"></i></a>
+            </div><!--player__control__buttons-->
+            <div class="player__control__progress">
+               <div style="width: 10%;" class="player__control__progress_2"></div>
+            </div><!--player__control__progress-->
+         </div><!--player__control-->
+      </div><!--player-->
+
+      <audio src="audioplayer" style="position: absolute; left: 0; top: 0; z-index: -999; opacity: 0;" controls="">
+         
+      </audio>
+      
+      <script src="js/all.min.js"></script>
+     
+      <script>
+         var audioPlayer = document.getElementById('audioplayer');
+         var loaded = false;
+
+         var playBtn = document.getElementById('playBtn');
+         var pauseBtn = document.getElementById('pauseBtn');
+
+         pauseBtn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            playBtn.style.display = "inline";
+            pauseBtn.style.display = "none";
+            audioPlayer.pause();
+            return false;
+         });
+
+         playBtn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            playBtn.style.display = "none";
+            pauseBtn.style.display = "inline";
+            audioPlayer.play();
+            return false;
+         });
+
+         const playSong = (File) => {
+            if (loaded == false){
+               audioPlayer.innerHTML = `<source src="`+file+`" type="audio/mp3" />`;
+               loaded = true;
+            }
+               audioPlayer.play();        
+               playBtn.style.display = "none";
+               pauseBtn.style.display = "inline";
+         }
+
+         document.querySelectorAll('.main__col').forEach(item =>{
+            item.addEventListener('click', event =>{
+               let image = item.getAttribute('data-image');
+               let artist = item.getAttribute('data-artist');
+               let song = item.getAttribute('data-song');
+               let file = item.getAttribute('data-file');
+               let playerArtistComponent = document.getElementsByClassName('player__artist');
+               playerArtistComponent[0].innerHTML = `
+                  <img src="`+image+`"/>
+                  <h4>`+artist+`<br><span>`+song+`</span></h4>
+               `;
+               playSong(file);
+            })
+         });
+      </script>
+
+   </body>
+</html>
